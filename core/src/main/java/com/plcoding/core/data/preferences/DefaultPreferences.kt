@@ -1,4 +1,4 @@
-package com.plcoding.core.domain
+package com.plcoding.core.data.preferences
 
 import android.content.SharedPreferences
 import com.plcoding.core.domain.model.ActivityLevel

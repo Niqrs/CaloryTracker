@@ -13,7 +13,7 @@ interface Preferences {
     fun saveHeight(height: Int)
     fun saveActivityLevel(level: ActivityLevel)
     fun saveGoalType(type: GoalType)
-    fun saveCardRation(ratio: Float)
+    fun saveCarbRation(ratio: Float)
     fun saveProteinRatio(ratio: Float)
     fun saveFatRatio(ratio: Float)
 

@@ -1,11 +1,11 @@
-package com.plcoding.tracker_data.remote.local
+package com.plcoding.tracker_data.local
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.plcoding.tracker_data.remote.local.entity.TrackedFoodEntity
+import com.plcoding.tracker_data.local.entity.TrackedFoodEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

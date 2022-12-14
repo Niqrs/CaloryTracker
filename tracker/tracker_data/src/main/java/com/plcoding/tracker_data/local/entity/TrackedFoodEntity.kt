@@ -1,4 +1,4 @@
-package com.plcoding.tracker_data.remote.local.entity
+package com.plcoding.tracker_data.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

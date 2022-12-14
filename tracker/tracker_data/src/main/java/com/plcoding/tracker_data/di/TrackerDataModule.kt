@@ -1,9 +1,9 @@
-package com.plcoding.tracker_data.remote.di
+package com.plcoding.tracker_data.di
 
 import android.app.Application
 import androidx.room.Room
+import com.plcoding.tracker_data.local.TrackerDatabase
 import com.plcoding.tracker_data.remote.OpenFoodApi
-import com.plcoding.tracker_data.remote.local.TrackerDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

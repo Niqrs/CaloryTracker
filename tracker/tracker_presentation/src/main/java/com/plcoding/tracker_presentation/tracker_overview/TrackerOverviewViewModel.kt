@@ -82,7 +82,7 @@ class TrackerOverviewViewModel @Inject constructor(
     }
 
     private fun refreshFoods() {
-        getFoodsForDateJob?.cancel() //TODO: ???
+        getFoodsForDateJob?.cancel() //TODO: Can it be in init?
         getFoodsForDateJob = trackerUseCases
             .getFoodsForDate(state.date)
             .onEach { foods ->

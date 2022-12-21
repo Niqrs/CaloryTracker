@@ -7,7 +7,7 @@ import java.time.LocalDate
 sealed class SearchEvent {
     data class OnQueryChange(val query: String): SearchEvent()
     object OnSearch: SearchEvent()
-    data class OnToggleTrackableFood(val food: TrackableFood): SearchEvent()
+    data class OnToggleTrackableFood(val food: TrackableFood): SearchEvent() //TODO: can it be just food name?
     data class OnAmountForFoodChange(
         val food: TrackableFood,
         val amount: String

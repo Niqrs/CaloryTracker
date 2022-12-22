@@ -23,7 +23,7 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.niqr.core_ui.LocalSpacing
+import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.core.R
 import com.plcoding.core.util.UiEvent
 import com.plcoding.tracker_domain.model.MealType

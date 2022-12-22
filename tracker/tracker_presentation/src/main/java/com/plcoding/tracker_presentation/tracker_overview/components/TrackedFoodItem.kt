@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
-import com.niqr.core_ui.LocalSpacing
+import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.core.R
 import com.plcoding.tracker_domain.model.TrackedFood
 import com.plcoding.tracker_presentation.components.NutrientInfo

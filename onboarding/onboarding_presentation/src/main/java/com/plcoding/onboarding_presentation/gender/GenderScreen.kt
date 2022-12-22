@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.niqr.core_ui.LocalSpacing
+import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.core.R
 import com.plcoding.core.domain.model.Gender
 import com.plcoding.core.util.UiEvent

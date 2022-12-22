@@ -11,9 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Size
-import com.niqr.core_ui.CarbColor
-import com.niqr.core_ui.FatColor
-import com.niqr.core_ui.ProteinColor
+import com.plcoding.core_ui.CarbColor
+import com.plcoding.core_ui.FatColor
+import com.plcoding.core_ui.ProteinColor
 
 @Composable
 fun NutrientsBar(

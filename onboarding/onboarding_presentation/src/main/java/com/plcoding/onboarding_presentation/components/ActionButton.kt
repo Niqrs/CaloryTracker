@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import com.niqr.core_ui.LocalSpacing
+import com.plcoding.core_ui.LocalSpacing
 
 @Composable
 fun ActionButton(

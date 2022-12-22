@@ -23,7 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import com.niqr.core_ui.LocalSpacing
+import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.core.R
 import com.plcoding.tracker_presentation.components.NutrientInfo
 import com.plcoding.tracker_presentation.components.UnitDisplay

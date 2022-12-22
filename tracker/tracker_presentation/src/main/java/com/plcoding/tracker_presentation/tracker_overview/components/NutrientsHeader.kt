@@ -20,10 +20,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.niqr.core_ui.CarbColor
-import com.niqr.core_ui.FatColor
-import com.niqr.core_ui.LocalSpacing
-import com.niqr.core_ui.ProteinColor
+import com.plcoding.core_ui.CarbColor
+import com.plcoding.core_ui.FatColor
+import com.plcoding.core_ui.LocalSpacing
+import com.plcoding.core_ui.ProteinColor
 import com.plcoding.core.R
 import com.plcoding.tracker_presentation.components.UnitDisplay
 import com.plcoding.tracker_presentation.tracker_overview.TrackerOverviewState

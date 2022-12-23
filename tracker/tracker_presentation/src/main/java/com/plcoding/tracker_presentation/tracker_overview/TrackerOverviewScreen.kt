@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.core.R
+import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.tracker_presentation.tracker_overview.components.AddButton
 import com.plcoding.tracker_presentation.tracker_overview.components.DaySelector
 import com.plcoding.tracker_presentation.tracker_overview.components.ExpandableMeal
@@ -64,7 +64,9 @@ fun TrackerOverviewScreen(
                             .fillMaxWidth()
                             .padding(horizontal = spacing.spaceSmall)
                     ) {
-                        state.trackedFoods.forEach { food ->
+                        state.trackedFoods
+                            .filter { it.mealType == meal.mealType }
+                            .forEach { food ->
                             TrackedFoodItem(
                                 trackedFood = food,
                                 onDeleteClick = {

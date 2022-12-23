@@ -1,6 +1,8 @@
 package com.plcoding.tracker_data.di
 
 import android.app.Application
+import android.content.Context
+import android.telephony.TelephonyManager
 import androidx.room.Room
 import com.plcoding.tracker_data.local.TrackerDatabase
 import com.plcoding.tracker_data.remote.OpenFoodApi
@@ -9,6 +11,7 @@ import com.plcoding.tracker_domain.repostitory.TrackerRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -35,9 +38,16 @@ object TrackerDataModule {
 
     @Provides
     @Singleton
-    fun provideOpenFoodApi(client: OkHttpClient): OpenFoodApi {
+    fun provideOpenFoodApi(
+        @ApplicationContext context: Context,
+        client: OkHttpClient
+    ): OpenFoodApi {
+        val telephonyManager =
+            context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+        val countryCode = telephonyManager.networkCountryIso
+
         return Retrofit.Builder()
-            .baseUrl(OpenFoodApi.BASE_URL)
+            .baseUrl(OpenFoodApi.buildUrl(countryCode))
             .addConverterFactory(MoshiConverterFactory.create())
             .client(client)
             .build()

@@ -14,6 +14,6 @@ interface OpenFoodApi {
     ): SearchDto
 
     companion object {
-        const val BASE_URL = "https://us.openfoodfacts.org/" //TODO: what about multinational app?
+        fun buildUrl(countryCode: String = "world") = "https://$countryCode.openfoodfacts.org/"
     }
 }

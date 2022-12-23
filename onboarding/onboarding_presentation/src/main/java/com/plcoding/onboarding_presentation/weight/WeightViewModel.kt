@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.plcoding.core.R
+import com.plcoding.core.domain.model.Gender
 import com.plcoding.core.domain.preferences.Preferences
 import com.plcoding.core.util.UiEvent
 import com.plcoding.core.util.UiText
@@ -20,7 +21,9 @@ class WeightViewModel @Inject constructor(
     private val preferences: Preferences,
 ) : ViewModel() {
 
-    var weight by mutableStateOf("80.0") //TODO: it should depend on gender
+    var weight by mutableStateOf(
+        if (preferences.loadUserInfo().gender is Gender.Male) "80" else "70"
+    )
         private set
 
     private val _uiEvent = Channel<UiEvent>()

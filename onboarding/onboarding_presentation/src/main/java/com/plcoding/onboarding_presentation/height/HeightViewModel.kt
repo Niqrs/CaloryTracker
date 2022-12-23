@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.plcoding.core.R
+import com.plcoding.core.domain.model.Gender
 import com.plcoding.core.domain.preferences.Preferences
 import com.plcoding.core.domain.use_case.FilterOutDigits
 import com.plcoding.core.util.UiEvent
@@ -22,7 +23,9 @@ class HeightViewModel @Inject constructor(
     private val filterOutDigits: FilterOutDigits
 ) : ViewModel() {
 
-    var height by mutableStateOf("180") //TODO: it should depend on gender
+    var height by mutableStateOf(
+        if (preferences.loadUserInfo().gender is Gender.Male) "180" else "170"
+    )
         private set
 
     private val _uiEvent = Channel<UiEvent>()
